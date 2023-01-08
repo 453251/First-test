@@ -1,5 +1,5 @@
 ﻿// ConsoleApplication2.cpp : 此文件包含 "main" 函数。程序执行将在此处开始并结束。
-//
+//思路就是将原矩阵顺时针存储到一个队列中，然后将队尾放到队首，之后将新的数组顺时针赋值给这个矩阵，即得到答案
 
 #include <iostream>
 #include<stdlib.h>
@@ -8,11 +8,12 @@ int a[9][9],s[1000];//用队列s来存储a中的所有数据，按照顺时针�
 int main()
 {
     int m, n, i, j, k=0;
+    //随机生成m，n，范围为3·7
     m = rand() % 5 + 3;
     n = rand() % 5 + 3;
     for (i = 0; i <m; i++)
         for (j = 0; j < n; j++)
-            a[i][j] = rand() % 9 + 1;
+            a[i][j] = rand() % 9 + 1;//生成矩阵中的数，范围为1-9
     cout << m << " " << n << endl;
     cout << "原矩阵为:" << endl;
     for (i =0; i <m; i++)
