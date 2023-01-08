@@ -13,7 +13,7 @@ int main()
 	 cin >> A >> B >> C >> D;
 	 for ( i = 0; i <= 100; i++,x1++)
 	 {
-		 if (i > A) break;
+		 if (i > A) break;//如果当前亮度大于所需的，直接退出
 		 a[x1] = i;
 		 for ( j = 0; j <= 100; j++,x2++)
 		 {
@@ -25,7 +25,7 @@ int main()
 				 c[x3] = k; 
 				 for (l = 0; l <= 100; l++, x4++)
 				 {
-					 if (i + j + k + l > Min)
+					 if (i + j + k + l > Min)//如果大于当前的最小值，直接舍弃，不用这种情况
 					 {
 						 break;
 					 }
