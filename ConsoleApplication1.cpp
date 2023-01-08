@@ -4,6 +4,7 @@
 #include <iostream>
 #include<cmath>
 using namespace std;
+//判断一个数是否是素数
 int isPrime(int n)
 {
     int i;
@@ -27,7 +28,7 @@ int isPrime(int n)
 int main()
 {
     int n; cin >> n;
-    int a, b, c;//考虑用两个或者三个素数来实现，三个已经足够
+    int a, b, c;//考虑用两个或者三个素数来实现，三个已经足够表示了
     for(a=2;;a++)
         for (b = 2;; b++)
         {
