@@ -5,14 +5,14 @@
 using namespace std;
 struct jiqi
 {
-    int flag;
-    int time;
-    int cnt;
+    int flag;//用来标记机器是否正在使用
+    int time;//标记机器还需要使用的时间
+    int cnt;//标记机器所需使用的总共时间，最终结果就是机器所用总时间中最大的
 }machine[100];
 int main()
 {
     int queue[100];
-    int head = 0, tail = 0, m, n, Max = 0;
+    int head = 0, tail = 0, m, n, Max = 0;//tail尾指针指向队尾的下一个位置
     cin >> m >> n;
     //读入每个学生的包裹数量
     for (int i = 0; i < n; i++)
